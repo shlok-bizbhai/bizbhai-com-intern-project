@@ -1,38 +1,52 @@
 function Hero() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
-      <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-purple-600/20 blur-3xl" />
+    <section className="py-20 md:py-28">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+        <div>
+          <p className="text-teal text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            — For shops that mean business
+          </p>
 
-      <div className="relative max-w-3xl mx-auto px-6 flex flex-col items-center text-center">
-        <span className="mb-6 px-4 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-gray-300">
-          Built for local businesses
-        </span>
+          <h1 className="font-display text-6xl md:text-7xl leading-[0.95] uppercase">
+            Your dukaan's{' '}
+            <span className="text-marigold">digital signboard</span>
+          </h1>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          Grow Your Business{' '}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Online with BizBhAI
-          </span>
-        </h1>
+          <p className="mt-6 max-w-md text-dim text-lg">
+            A website, a Google Business profile, and a WhatsApp Business
+            setup — so customers walking past online find you first.
+          </p>
 
-        <p className="mt-6 max-w-xl text-gray-400 text-lg">
-          One platform for your website, Google Business profile, and WhatsApp
-          Business — so customers can find you, trust you, and choose you.
-        </p>
+          <div className="mt-9 flex flex-col sm:flex-row gap-4">
+            <a
+              href="#cta"
+              className="px-6 py-3 rounded-md bg-marigold text-ink font-semibold text-center hover:brightness-110 transition"
+            >
+              Get Started Free
+            </a>
+            <a
+              href="#process"
+              className="px-6 py-3 rounded-md border border-paper/20 text-paper font-semibold text-center hover:bg-paper/5 transition"
+            >
+              See How It Works
+            </a>
+          </div>
+        </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#cta"
-            className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 font-semibold hover:opacity-90 transition"
-          >
-            Get Started Free
-          </a>
-          <a
-            href="#process"
-            className="px-6 py-3 rounded-lg border border-white/15 font-semibold text-gray-200 hover:bg-white/5 transition"
-          >
-            See How It Works
-          </a>
+        <div className="relative">
+          <div className="-rotate-3 bg-marigold text-ink rounded-2xl p-10 shadow-2xl shadow-black/50">
+            <p className="font-display text-5xl leading-[0.9] uppercase">
+              Open
+              <br />
+              Online
+              <br />
+              24/7
+            </p>
+            <p className="mt-4 text-sm font-medium text-ink/70">
+              No "shop closed" sign, ever.
+            </p>
+          </div>
+          <div className="absolute -top-5 -right-4 rotate-6 w-16 h-16 rounded-full bg-teal border-4 border-ink" />
         </div>
       </div>
     </section>
