@@ -1,30 +1,16 @@
-# BizBhAI Training Plan
+# React + Vite
 
-## Learning Sources
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-1. [React JS 19 Full Course 2025](https://www.youtube.com/watch?v=dCLhUialKPQ)
-2. [Tailwind CSS v4 Full Course 2025](https://www.youtube.com/watch?v=6biMWgD6_JY)
+Currently, two official plugins are available:
 
-## Project
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Create a responsive BizBhAI.com landing page using React and Tailwind CSS.
+## React Compiler
 
-- Hero section
-- BizBhAI introduction
-- Website service
-- Google Business Profile service
-- WhatsApp Business service
-- Three-step process section
-- Call-to-action section
-- Footer
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## GitHub Project
+## Expanding the Oxlint configuration
 
-[Open the BizBhAI project on GitHub](https://github.com/shlok-bizbhai/bizbhai-com-intern-project)
-
-Connect the project with VS Code, create your own branch using your name,
-complete the project, and submit a Pull Request into `main`.
-
-Add `@shlok-bizbhai` as the reviewer.
-
-Learning will be checked through the completed project and Pull Request review.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
