@@ -9,7 +9,7 @@ function Process({ steps }) {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-        {/* Heading */}
+       
         <div className="text-center">
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97360]">
             Our Process
@@ -20,7 +20,7 @@ function Process({ steps }) {
           </h2>
         </div>
 
-        {/* Steps */}
+        
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
 
           {steps.map((step, index) => (
