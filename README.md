@@ -1,16 +1,63 @@
-# React + Vite
+# BizBhAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+BizBhAI is a modern React + Tailwind landing page for an AI-powered business growth platform. The project is designed to showcase how BizBhAI helps businesses grow through website optimization, Google Business Profile strategies, WhatsApp automation, and AI-driven conversion systems.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project focuses on creating a premium, conversion-oriented homepage with:
 
-## React Compiler
+- a strong hero section
+- business value positioning
+- service cards
+- a simple 3-step process flow
+- a clear call-to-action section
+- a polished footer
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Features
+
+- Responsive landing page layout
+- Professional, startup-style visual design
+- Conversion-focused CTA sections
+- Mobile-friendly components
+- Clean, scalable component structure
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```text
+src/
+  App.jsx
+  index.css
+  components/
+    Navbar.jsx
+    Hero.jsx
+    Introduction.jsx
+    Services.jsx
+    Process.jsx
+    CTA.jsx
+    Footer.jsx
+```
+
+## Notes
+
+This repository is a front-end landing page prototype for BizBhAI and is ready for further refinement, branding updates, or deployment.
