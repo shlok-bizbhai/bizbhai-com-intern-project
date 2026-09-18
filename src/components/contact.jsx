@@ -14,7 +14,7 @@ function ContactModal({ showModal, setShowModal }) {
         onClick={(e) => e.stopPropagation()}
       >
 
-        {/* Header */}
+        
         <div className="flex items-start justify-between">
           <div>
             <span className="text-sm font-semibold text-[#F97360]">
@@ -34,13 +34,13 @@ function ContactModal({ showModal, setShowModal }) {
           </button>
         </div>
 
-        {/* Description */}
+     
         <p className="mt-4 text-sm leading-6 text-[#172554]/60">
           Tell us a little about your business and the digital service
           you're interested in.
         </p>
 
-        {/* Form */}
+       
         <div className="mt-6 space-y-4">
 
           <input
