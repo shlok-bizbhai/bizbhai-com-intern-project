@@ -1,58 +1,102 @@
-import { useState } from "react"
+import { useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import Logo from './Logo'
+import Button from './Button'
+
+const NAV_LINKS = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Process', href: '#process' },
+  { label: 'Contact', href: '#contact' },
+]
 
 function Navbar() {
-  const [menu, setMenu] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  // Small "premium" touch: a subtle shadow once the page has scrolled,
+  // instead of a flat border the whole time. A one-off state change,
+  // not a continuous animation.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-        <a href="#home" className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-blue-600 to-indigo-600 text-sm font-bold text-white shadow-lg shadow-blue-200">
-            B
-          </div>
-          <div>
-            <span className="block text-lg font-black tracking-tight text-slate-900">
-              BizBhAI
-            </span>
-          </div>
-        </a>
+    <header
+      className={`sticky top-0 z-50 border-b border-line bg-white/85 backdrop-blur-md transition-shadow duration-200 ${
+        scrolled ? 'shadow-[0_1px_0_rgba(11,27,51,0.04),0_8px_24px_-16px_rgba(11,27,51,0.25)]' : ''
+      }`}
+    >
+      <nav
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 md:h-20 lg:px-8"
+        aria-label="Primary"
+      >
+        <Logo />
 
-        <div className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
-          <a href="#home" className="transition hover:text-blue-600">Home</a>
-          <a href="#services" className="transition hover:text-blue-600">Services</a>
-          <a href="#about" className="transition hover:text-blue-600">About</a>
-          <a href="#process" className="transition hover:text-blue-600">How It Works</a>
+        <ul className="hidden items-center gap-9 md:flex">
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="text-[15px] font-medium text-muted transition-colors hover:text-navy-950"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden md:block">
+          <Button href="#contact">Get Started</Button>
         </div>
 
-        <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            className="hidden rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-200 transition hover:-translate-y-0.5 hover:bg-slate-800 sm:inline-flex"
-          >
-            Get Started
-          </a>
+        <button
+          type="button"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-navy-950 md:hidden"
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
 
-          <button
-            onClick={() => setMenu(!menu)}
-            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-medium text-slate-700 md:hidden"
-            aria-label="Toggle menu"
-          >
-            Menu
-          </button>
-        </div>
+      {/* Kept mounted and animated via max-height/opacity rather than
+          appearing/disappearing instantly. `inert` removes it from the
+          tab order and from assistive tech while closed. */}
+      <div
+        id="mobile-menu"
+        inert={!isOpen}
+        aria-hidden={!isOpen}
+        className={`overflow-hidden border-t border-line bg-white transition-all duration-300 ease-out md:hidden ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <ul className="flex flex-col gap-1 px-4 py-4 sm:px-6">
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block rounded-lg px-3 py-2.5 text-[15px] font-medium text-ink hover:bg-surface"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li className="pt-2">
+            <Button href="#contact" className="w-full" onClick={() => setIsOpen(false)}>
+              Get Started
+            </Button>
+          </li>
+        </ul>
       </div>
-
-      {menu && (
-        <div className="border-t border-slate-200 bg-white px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-3 text-sm font-medium text-slate-600">
-            <a href="#home" onClick={() => setMenu(false)}>Home</a>
-            <a href="#services" onClick={() => setMenu(false)}>Services</a>
-            <a href="#about" onClick={() => setMenu(false)}>About</a>
-            <a href="#process" onClick={() => setMenu(false)}>How It Works</a>
-          </div>
-        </div>
-      )}
-    </nav>
+    </header>
   )
 }
 
