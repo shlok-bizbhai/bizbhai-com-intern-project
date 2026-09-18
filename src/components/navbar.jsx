@@ -15,7 +15,7 @@ function Navbar({
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#172554]/10 bg-[#FFFBF5]/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
 
-        {/* Logo */}
+        
         <button
           onClick={() => scrollTo("home")}
           className="flex items-center gap-2"
@@ -29,7 +29,7 @@ function Navbar({
           </span>
         </button>
 
-        {/* Desktop Navigation */}
+        
         <div className="hidden items-center gap-8 md:flex">
 
           <button
@@ -62,7 +62,7 @@ function Navbar({
 
         </div>
 
-        {/* Mobile Menu Button */}
+       
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="rounded-lg p-2 md:hidden"
@@ -72,7 +72,7 @@ function Navbar({
 
       </div>
 
-      {/* Mobile Navigation */}
+      
       {menuOpen && (
         <div className="border-t border-[#172554]/10 bg-[#FFFBF5] px-6 py-5 md:hidden">
           <div className="flex flex-col gap-4">
