@@ -14,7 +14,7 @@ function Services({ services }) {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-        {/* Section Heading */}
+        
         <div className="max-w-2xl">
           <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F97360]">
             Our Services
@@ -30,7 +30,7 @@ function Services({ services }) {
           </p>
         </div>
 
-        {/* Services Cards */}
+       
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
 
           {services.map((service, index) => {
@@ -42,7 +42,7 @@ function Services({ services }) {
                 className="service-card group rounded-3xl border border-[#172554]/10 bg-white p-7 shadow-sm"
               >
 
-                {/* Icon and Number */}
+                
                 <div className="flex items-center justify-between">
 
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#172554] text-white transition group-hover:bg-[#F97360]">
@@ -55,17 +55,17 @@ function Services({ services }) {
 
                 </div>
 
-                {/* Title */}
+                
                 <h3 className="mt-7 text-2xl font-bold">
                   {service.title}
                 </h3>
 
-                {/* Description */}
+                
                 <p className="mt-4 leading-7 text-[#172554]/60">
                   {service.text}
                 </p>
 
-                {/* Points */}
+                
                 <div className="mt-7 space-y-3 border-t border-[#172554]/10 pt-6">
 
                   {service.points.map((point) => (
