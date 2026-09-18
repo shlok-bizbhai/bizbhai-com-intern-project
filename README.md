@@ -1,30 +1,63 @@
-# BizBhAI Training Plan
+# BizBhAI
 
-## Learning Sources
+BizBhAI is a modern React + Tailwind landing page for an AI-powered business growth platform. The project is designed to showcase how BizBhAI helps businesses grow through website optimization, Google Business Profile strategies, WhatsApp automation, and AI-driven conversion systems.
 
-1. [React JS 19 Full Course 2025](https://www.youtube.com/watch?v=dCLhUialKPQ)
-2. [Tailwind CSS v4 Full Course 2025](https://www.youtube.com/watch?v=6biMWgD6_JY)
+## Overview
 
-## Project
+This project focuses on creating a premium, conversion-oriented homepage with:
 
-Create a responsive BizBhAI.com landing page using React and Tailwind CSS.
+- a strong hero section
+- business value positioning
+- service cards
+- a simple 3-step process flow
+- a clear call-to-action section
+- a polished footer
 
-- Hero section
-- BizBhAI introduction
-- Website service
-- Google Business Profile service
-- WhatsApp Business service
-- Three-step process section
-- Call-to-action section
-- Footer
+## Tech Stack
 
-## GitHub Project
+- React
+- Vite
+- Tailwind CSS
 
-[Open the BizBhAI project on GitHub](https://github.com/shlok-bizbhai/bizbhai-com-intern-project)
+## Features
 
-Connect the project with VS Code, create your own branch using your name,
-complete the project, and submit a Pull Request into `main`.
+- Responsive landing page layout
+- Professional, startup-style visual design
+- Conversion-focused CTA sections
+- Mobile-friendly components
+- Clean, scalable component structure
 
-Add `@shlok-bizbhai` as the reviewer.
+## Getting Started
 
-Learning will be checked through the completed project and Pull Request review.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```text
+src/
+  App.jsx
+  index.css
+  components/
+    Navbar.jsx
+    Hero.jsx
+    Introduction.jsx
+    Services.jsx
+    Process.jsx
+    CTA.jsx
+    Footer.jsx
+```
+
+## Notes
+
+This repository is a front-end landing page prototype for BizBhAI and is ready for further refinement, branding updates, or deployment.
