@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <section id="home" className="relative overflow-hidden px-6 py-16 md:px-10 md:py-24">
-      <div className="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.14),_transparent_55%)]" />
+      <div className="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_55%)]" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.08fr_0.92fr]">
         <div>
@@ -12,7 +12,7 @@ function Hero() {
 
           <h1 className="max-w-xl text-4xl font-black leading-[1.02] tracking-[-0.06em] text-slate-950 md:text-6xl">
             Turn your business
-            <span className="mt-2 block text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text">
+            <span className="mt-2 block text-transparent bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text">
               into a demand engine.
             </span>
           </h1>
@@ -57,11 +57,11 @@ function Hero() {
         </div>
 
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[520px]">
-            <div className="absolute -inset-6 rounded-[2rem] bg-linear-to-br from-blue-100 via-white to-indigo-100 blur-2xl" />
+          <div className="relative w-full max-w-130">
+            <div className="absolute -inset-6 rounded-4xl bg-linear-to-br from-blue-100 via-white to-indigo-100 blur-2xl" />
 
-            <div className="relative rounded-[2rem] border border-slate-200 bg-white p-5 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
-              <div className="rounded-[1.5rem] bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 p-6 text-white">
+            <div className="relative rounded-4xl border border-slate-200 bg-white p-5 shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
+              <div className="rounded-3xl bg-linear-to-br from-slate-950 via-slate-900 to-blue-950 p-6 text-white">
                 <div className="mb-6 flex items-center justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.2em] text-slate-300">BizBhAI</p>
@@ -90,7 +90,7 @@ function Hero() {
                     <span>+84%</span>
                   </div>
                   <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/10">
-                    <div className="h-full w-[84%] rounded-full bg-gradient-to-r from-blue-400 to-cyan-300" />
+                    <div className="h-full w-[84%] rounded-full bg-linear-to-r from-blue-400 to-cyan-300" />
                   </div>
                 </div>
               </div>
